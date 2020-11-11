@@ -1,7 +1,8 @@
 resource ibm_is_subnet subnet {
-  name                     = "${var.name}-${var.zone}-subnet"
+  count = length(var.zone)
+  name                     = "${var.name}-${var.zone}-${count.index +1}-subnet"
   vpc                      = var.vpc_id
-  zone                     = var.zone
+  zone                     = var.zone[count.index]
   total_ipv4_address_count = local.address_count
   network_acl              = local.network_acl
   public_gateway           = local.public_gateway
