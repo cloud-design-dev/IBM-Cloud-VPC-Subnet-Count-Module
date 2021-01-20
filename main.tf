@@ -1,11 +1,11 @@
 resource ibm_is_subnet subnet {
-  name                     = "${var.name}-${var.zone}-subnet"
+  name                     = var.name
   vpc                      = var.vpc_id
   zone                     = var.zone
   total_ipv4_address_count = local.address_count
   network_acl              = local.network_acl
   public_gateway           = local.public_gateway
-  resource_group           = data.ibm_resource_group.group.id
+  resource_group           = var.resource_group
 }
 
 locals {
