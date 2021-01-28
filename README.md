@@ -55,7 +55,7 @@ module subnet {
 |------|-------------|------|---------|:--------:|
 | resource\_group\_id | ID of the resource group to associate with the virtual server instance | `string` | n/a | yes |
 | vpc\_id | ID of the VPC where to create the virtual server instance | `string` | n/a | yes |
-| subnet\_cidr | The CIDR for the subnet being created. | `string` | n/a | yes |
+| address\_count | Number of IPs to assign to Subnet. | `string` | n/a | yes |
 | name | Name of the virtual server instance | `string` | n/a | yes |
 | zone | VPC zone where the virtual server instance will be created. | `string` | n/a | yes |
 | network\_acl | Network ACL to attach to subnet | `string` | `""` | no |
