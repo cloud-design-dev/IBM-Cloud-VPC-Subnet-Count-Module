@@ -1,4 +1,4 @@
-# ibm-vpc-subnet-count-module
+# Subnet Module for IBM CLoud VPC 
 Terraform module for creating a VPC Subnet in IBM Cloud based on the `total_ipv4_address_count` option. 
 
 ## Usage
