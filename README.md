@@ -19,7 +19,7 @@ module subnet {
   source         = "git::https://github.com/cloud-design-dev/ibm-vpc-subnet-count-module.git"
   name           = var.name
   resource_group = data.ibm_resource_group.group.id
-  network_acl    = module.vpc.default_network_acl
+  network_acl    = var.network_acl
   address_count  = var.address_count
   vpc_id         = var.vpc_id
   zone           = data.ibm_is_zones.mzr.zones[0]
