@@ -57,7 +57,7 @@ module subnet {
 | vpc\_id | ID of the VPC where to create the virtual server instance | `string` | n/a | yes |
 | subnet\_cidr | The CIDR for the subnet being created. | `string` | n/a | yes |
 | name | Name of the virtual server instance | `string` | n/a | yes |
-| zone | VPC zone where the virtual server instance will be created.
+| zone | VPC zone where the virtual server instance will be created. | `string` | n/a | yes |
 | network\_acl | Network ACL to attach to subnet | `string` | `""` | no |
 | public\_gateway | Public Gateway to attach to the subnet | `string` | `""` | no | 
 
