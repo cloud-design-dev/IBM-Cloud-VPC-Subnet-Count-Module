@@ -1,5 +1,5 @@
 # Subnet Module for IBM CLoud VPC 
-Terraform module for creating a VPC Subnet in IBM Cloud based on the `total_ipv4_address_count` option. If you need to specify the exact CIDR ranges for the subnet, please use 
+Terraform module for creating a VPC Subnet in IBM Cloud based on the `total_ipv4_address_count` option. If you need to specify the exact CIDR ranges for the subnet, please use the [IBM-Cloud-VPC-Subnet-CIDR-Module](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Subnet-CIDR-Module).
 
 ## Usage
 If you need to include an IBM Cloud VPC in your deployment you can use the following code:
