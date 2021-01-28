@@ -45,7 +45,7 @@ module subnet {
   address_count  = var.address_count
   vpc_id         = var.vpc_id
   zone           = data.ibm_is_zones.mzr.zones[0]
-  public_gateway = ibm_is
+  public_gateway = var.public_gateway
 }
 ```
 
@@ -59,7 +59,7 @@ module subnet {
 | name | Name of the virtual server instance | `string` | n/a | yes |
 | zone | VPC zone where the virtual server instance will be created.
 | network\_acl | Network ACL to attach to subnet | `string` | `""` | no |
-| public\_gateway | Public Gateway to attach to 
+| public\_gateway | Public Gateway to attach to the subnet | `string` | `""` | no | 
 
 
 ## Outputs
