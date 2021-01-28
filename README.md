@@ -49,15 +49,24 @@ module subnet {
 }
 ```
 
-## Variables 
- - **resource_group:** The Resource Group name. This gets used as a data source for the deployed resources.
- - **name:** Name that gets assigned to the subnet.
- - **address_count:** Number of IPs to assign to the subnet. Default is `256`.
- - **network_acl:** The Network ACL to assign to the subnet. 
- - **public_gateway:** Public Gateway ID to use with subnet
- - **vpc_id:** VPC to target for new subnet. 
- - **zone**: The VPC zone where the subnet will be created.
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| resource\_group\_id | ID of the resource group to associate with the virtual server instance | `string` | n/a | yes |
+| vpc\_id | ID of the VPC where to create the virtual server instance | `string` | n/a | yes |
+| subnet\_cidr | The CIDR for the subnet being created. | `string` | n/a | yes |
+| name | Name of the virtual server instance | `string` | n/a | yes |
+| zone | VPC zone where the virtual server instance will be created.
+| network\_acl | Network ACL to attach to subnet | `string` | `""` | no |
+| public\_gateway | Public Gateway to attach to 
+
 
 ## Outputs
- - **id:** The ID of the created subnet.
- - **ipv4_cidr_block:** The IPv4 CIDR block for the newly created subnet. 
+
+| Name | Description |
+|------|-------------|
+| id | ID of the created Subnet | 
+| ipv4_cidr_block | IPv4 CIDR block for the subnet |
+| available_ipv4_address_count | Number of IPs in the subnet  | 
+
