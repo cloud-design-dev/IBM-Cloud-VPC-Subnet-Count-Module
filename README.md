@@ -16,7 +16,7 @@ data "ibm_is_zones" "mzr" {
 }
 
 module subnet {
-  source         = "git::https://github.com/cloud-design-dev/IBM-Cloud-VPC-Subnet-Module.git"
+  source         = "git::https://github.com/cloud-design-dev/IBM-Cloud-VPC-Subnet-Count-Module.git"
   name           = var.name
   resource_group = data.ibm_resource_group.group.id
   network_acl    = var.network_acl
@@ -38,7 +38,7 @@ data "ibm_is_zones" "mzr" {
 }
 
 module subnet {
-  source         = "git::https://github.com/cloud-design-dev/IBM-Cloud-VPC-Subnet-Module.git"
+  source         = "git::https://github.com/cloud-design-dev/IBM-Cloud-VPC-Subnet-Count-Module.git"
   name           = var.name
   resource_group = data.ibm_resource_group.group.id
   network_acl    = var.network_acl
